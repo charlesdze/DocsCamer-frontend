@@ -1,0 +1,52 @@
+name: docscamer
+description: "Application mobile de certification et vérification de documents officiels."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0                    # Pour communiquer avec l'API Node.js
+  flutter_secure_storage: ^9.0.0  # Pour stocker le Token JWT en toute sécurité
+  mobile_scanner: ^5.1.1          # Pour scanner les QR Codes (Agent vérificateur)
+  image_picker: ^1.0.7            # Pour prendre en photo une pièce d'identité
+  qr_flutter: ^4.1.0              # Pour générer des QR Codes officiels
+  local_auth: ^2.3.0              # Pour l'empreinte digitale et biométrie
+  camera: ^0.11.0+2               # Pour la reconnaissance faciale (capture flux vidéo)
+  google_mlkit_text_recognition: ^0.13.0 # OCR réel pour extraire les données
+  google_mlkit_face_detection: ^0.10.0  # IA pour détection faciale
+  fl_chart: ^0.70.2               # Pour les graphiques du Dashboard Admin
+  path_provider: ^2.1.2
+  share_plus: ^10.1.0
+  pdf: ^3.10.10
+  printing: ^5.11.1
+  image: ^4.2.0                    # Pour le rognage intelligent des documents
+  shimmer: ^3.0.0                  # Animations de chargement "Pro"
+  lottie: ^3.1.2                   # Animations Lottie
+  hive: ^2.2.3                     # Base de données locale
+  hive_flutter: ^1.1.0             # Extension Flutter pour Hive
+  firebase_core: ^3.10.1
+  firebase_messaging: ^15.2.10      # Notifications Push
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/img.png"
+  adaptive_icon_background: "#0A0F16"
+  adaptive_icon_foreground: "assets/images/img.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/img.png
+    - assets/animations/
